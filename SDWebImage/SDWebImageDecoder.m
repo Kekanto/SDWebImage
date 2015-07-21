@@ -39,7 +39,7 @@
     // Draw the image into the context and retrieve the new image, which will now have an alpha layer
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
     CGImageRef imageRefWithAlpha = CGBitmapContextCreateImage(context);
-    UIImage *imageWithAlpha = [UIImage imageWithCGImage:imageRefWithAlpha];
+    UIImage *imageWithAlpha = [UIImage imageWithCGImage:imageRefWithAlpha scale:[UIScreen mainScreen].scale orientation:image.imageOrientation];
 
     CGContextRelease(context);
     CGImageRelease(imageRefWithAlpha);

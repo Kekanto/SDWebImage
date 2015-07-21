@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary = 'Asynchronous image downloader with cache support with an UIImageView category.'
   s.homepage = 'https://github.com/rs/SDWebImage'
   s.author = { 'Olivier Poitrey' => 'rs@dailymotion.com' }
-  s.source = { :git => 'https://github.com/rs/SDWebImage.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/Kekanto/SDWebImage.git', :tag => s.version.to_s }
 
   s.description = 'This library provides a category for UIImageView with support for remote '      \
                   'images coming from the web. It provides an UIImageView category adding web '    \
@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = 'SDWebImage/{NS,SD,UI}*.{h,m}'
-    core.exclude_files = 'SDWebImage/UIImage+WebP.{h,m}'
   end
 
   s.subspec 'MapKit' do |mk|

@@ -29,17 +29,17 @@ inline UIImage *SDScaledImageForKey(NSString *key, UIImage *image) {
     else {
         if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
             CGFloat scale = [UIScreen mainScreen].scale;
-            if (key.length >= 8) {
-                NSRange range = [key rangeOfString:@"@2x."];
-                if (range.location != NSNotFound) {
-                    scale = 2.0;
-                }
-                
-                range = [key rangeOfString:@"@3x."];
-                if (range.location != NSNotFound) {
-                    scale = 3.0;
-                }
-            }
+//            if (key.length >= 8) {
+//                NSRange range = [key rangeOfString:@"@2x."];
+//                if (range.location != NSNotFound) {
+//                    scale = 2.0;
+//                }
+//                
+//                range = [key rangeOfString:@"@3x."];
+//                if (range.location != NSNotFound) {
+//                    scale = 3.0;
+//                }
+//            }
 
             UIImage *scaledImage = [[UIImage alloc] initWithCGImage:image.CGImage scale:scale orientation:image.imageOrientation];
             image = scaledImage;

@@ -308,7 +308,7 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
 #endif
 
             if (partialImageRef) {
-                UIImage *image = [UIImage imageWithCGImage:partialImageRef scale:1 orientation:orientation];
+                UIImage *image = [UIImage imageWithCGImage:partialImageRef scale:[UIScreen mainScreen].scale orientation:orientation];
                 NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
                 UIImage *scaledImage = [self scaledImageForKey:key image:image];
                 if (self.shouldDecompressImages) {
