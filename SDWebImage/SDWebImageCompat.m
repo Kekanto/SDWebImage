@@ -28,6 +28,7 @@ inline UIImage *SDScaledImageForKey(NSString *key, UIImage *image) {
     }
     else {
         if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+
             CGFloat scale = [UIScreen mainScreen].scale;
 
             UIImage *scaledImage = [[UIImage alloc] initWithCGImage:image.CGImage scale:scale orientation:image.imageOrientation];
