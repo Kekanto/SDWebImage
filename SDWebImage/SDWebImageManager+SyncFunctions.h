@@ -6,7 +6,8 @@
 //
 //
 
-#import <SDWebImage/SDWebImage.h>
+#import "SDWebImageManager.h"
+#import "SDImageCache+SyncFunctions.h"
 
 @interface SDWebImageManager (SyncFunctions)
 
