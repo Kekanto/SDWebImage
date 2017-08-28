@@ -20,7 +20,7 @@
     if (isInMemoryCache) {
         return YES;
     }
-    return YES;
+
     // Check for disk image
     return [self.imageCache diskImageExistsWithKey:key];
 }
